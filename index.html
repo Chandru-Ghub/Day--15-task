@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class='container'>
+        <div class="calculator">
+            <div class="crg"> </div>
+            <input type="text" placeholder="0" id="output">
+            <button  class="clean" onclick="clean()">C</button>
+            <button  class="back" onclick = 'back()'> back</button>
+            <button  class="brac" onclick = 'display("(")'> (</button>
+            <button  class="brac" onclick = 'display(")")'> )</button>
+            <button  class="sqrt" onclick = 'sqrt()'> √</button>
+            <button  class="cbrt" onclick = 'cbrt()'>   ∛ </button>
+            <button  onclick = 'display(".")'> .</button>
+            <button  class="mul" onclick = 'display("*")'> x</button>
+            <button  onclick = 'display("7")'> 7</button>
+            <button  onclick = 'display("8")'> 8</button>
+            <button onclick = 'display("9")'> 9</button>
+            <button  class="sub" onclick = 'display("/")'> /</button>
+            <button  onclick = 'display("6")'> 6</button>
+            <button  onclick = 'display("5")'> 5</button>
+            <button  onclick = 'display("4")'> 4</button>
+            <button  class="sub"  onclick = 'display("-")'> -</button>
+            <button  onclick = 'display("3")'> 3</button>
+            <button  onclick = 'display("2")'> 2</button>
+            <button  onclick = 'display("1")'> 1</button>
+            <button  class="add" onclick = 'display("+")'> +</button>
+            <button  onclick = 'display("%")'> %</button>
+            <button  onclick = 'display("0")'> 0</button>
+            <button  class = 'equal' onclick = 'calculate("=")'> =</button>
+            <p></p>
+        </div>
+    </div>
+
+    <script>
+        let outputscreen = document.getElementById('output');
+
+        function display(num){
+            if(num % 1 !== 0  ){
+                    // alert('not a number')
+                    // // outputscreen.value = '';
+                }
+                outputscreen.value += num;
+                
+        }
+        function calculate(){
+            try{
+                outputscreen.value = eval(outputscreen.value)
+                
+            }
+            catch(err){
+                alert('Only numbers are allowed')
+                outputscreen.value = '';
+            }
+        }
+        function clean(){
+            outputscreen.value = '';
+           
+        }
+        function back(){
+            outputscreen.value = outputscreen.value.slice(1);
+        }
+
+        function sqrt(){
+
+            outputscreen.value = Math.sqrt(outputscreen.value)
+        }
+        function cbrt(){
+
+            outputscreen.value = Math.cbrt(outputscreen.value)
+        }
+
+    </script>
+    
+</body>
+</html>
