@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="title">
+        <h1 id = 'title'> Arithmetic Calculator </h1>
+        <p id="description" >We can solve the basic arithemtic calculation even square and cube roots values by using this calculator </p>
+    </div>
+    <div class='container'>
+        
+        <div class="calculator">
+            <div class="crg"> </div>
+            <input type="text" placeholder="0" id="result">
+            <button  id = 'clear' class="clean" onclick="clean()">C</button>
+            <button  class="back" onclick = 'back()'> back</button>
+            <button  class="brac" onclick = 'display("(")'> (</button>
+            <button  class="brac" onclick = 'display(")")'> )</button>
+            <button  class="sqrt" onclick = 'sqrt()'> √</button>
+            <button  class="cbrt" onclick = 'cbrt()'>   ∛ </button>
+            <button  onclick = 'display(".")'> .</button>
+            <button  class="mul" onclick = 'display("*")'> x</button>
+            <button  id = '7' onclick = 'display("7")'> 7</button>
+            <button  id = '8' onclick = 'display("8")'> 8</button>
+            <button id = '9' onclick = 'display("9")'> 9</button>
+            <button  id = '' class="sub" onclick = 'display("/")'> /</button>
+            <button  id = '6' onclick = 'display("6")'> 6</button>
+            <button  id = '5' onclick = 'display("5")'> 5</button>
+            <button  id = '4' onclick = 'display("4")'> 4</button>
+            <button  id="subtract" class="sub"  onclick = 'display("-")'> -</button>
+            <button  id = '3' onclick = 'display("3")'> 3</button>
+            <button  id = '2' onclick = 'display("2")'> 2</button>
+            <button  id = '1' onclick = 'display("1")'> 1</button>
+            <button  id = 'add' class="add" onclick = 'display("+")'> +</button>
+            <button  onclick = 'display("%")'> %</button>
+            <button  onclick = 'display("0")'> 0</button>
+            <button  id = 'equal'class = 'equal' onclick = 'calculate("=")'> =</button>
+       
+        </div>
+    </div>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js" ></script>
+
+    <script>
+        let outputscreen = document.getElementById('result');
+
+        function display(num){
+            if(num % 1 !== 0  ){
+                    // alert('not a number')
+                    // // outputscreen.value = '';
+                }
+                outputscreen.value += num;
+                
+        }
+        function calculate(){
+            try{
+                outputscreen.value = eval(outputscreen.value)
+                
+            }
+            catch(err){
+                alert('Only numbers are allowed')
+                outputscreen.value = '';
+            }
+        }
+        function clean(){
+            outputscreen.value = '';
+           
+        }
+        function back(){
+            outputscreen.value = outputscreen.value.slice(0,-1);
+        }
+
+        function sqrt(){
+
+            outputscreen.value = Math.sqrt(outputscreen.value)
+        }
+        function cbrt(){
+
+            outputscreen.value = Math.cbrt(outputscreen.value)
+        }
+
+    </script>
+    
+</body>
+</html>
