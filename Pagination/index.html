@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <script  defer src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ot">
+  <div class="head">
+  <h1 id="title">Person Data</h1>
+  <p id="description"> Collection of persons id, name and Email address inside the table. By using pagination the list of content per page shows 15 data upto the n number of data form the API</p>
+  
+<span>NOTE Test case: Inside div element table with class = 'table table-bordered' not working 1-test case failed </span>
+</div>
+
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li id="prev">< Previous</li> 
+    <li id="pages"></li> 
+    <li id="next"> Next ></li>
+  </ul>
+  <div id="buttons" class="d-flex justify-content-center"></div>
+</nav>
+   <div class="tb table-responsive">
+    <table class="table table-bordered table-hover table-hover table-sm w-50 h-10 " >
+        <thead class="table-dark" >
+          <tr>
+           
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">EmailID</th>
+          </tr>
+        </thead>
+        <tbody id="table_body">
+         
+        </tbody>
+      </table>
+      
+    </div> 
+ <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script> 
+
+</body>
+</html>

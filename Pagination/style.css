@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table td,tr{
+    border: 2px solid black;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+body{
+    /* background-color: aqua; */
+  
+    height: 100vh;
+   
+}
+li{
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    
+}
+.tb{
+    display: flex;
+    justify-content: center;
+}
+li{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    opacity: .7;
+}
+.head{
+    background-color: black;
+    color: white;
+    opacity: .7;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80%;
+    
+}
+.ot{
+    display: flex;
+    place-content: center;
+}
+#prev:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+#next:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+span{
+    background-color: red;
+    
+}
